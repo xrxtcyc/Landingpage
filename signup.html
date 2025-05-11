@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HODU - 회원가입</title>
+    <link rel="stylesheet" href="./css/signup.css" />
+  </head>
+  <body>
+    <div class="signup-container">
+      <div class="logo">
+        <img src="./img/logo.png" alt="HODU" />
+      </div>
+
+      <div class="tab-container">
+        <div class="tab active" id="buyer-tab">구매회원가입</div>
+        <div class="tab" id="seller-tab">판매회원가입</div>
+      </div>
+
+      <!-- 구매회원가입 폼 -->
+      <div class="form-container" id="buyer-form">
+        <div class="form-group">
+          <label for="buyer-id">아이디</label>
+          <div class="input-group">
+            <input type="text" id="buyer-id" placeholder="아이디" />
+            <button class="verification-btn">중복확인</button>
+          </div>
+          <div class="error-message" id="buyer-id-error">필수 정보입니다</div>
+        </div>
+
+        <div class="form-group">
+          <label for="buyer-password">비밀번호</label>
+          <div class="input-group">
+            <input type="password" id="buyer-password" placeholder="비밀번호" />
+            <span class="password-toggle">
+              <img src="./img/icon-check-off.svg" alt="" srcset="" />
+            </span>
+          </div>
+          <div class="error-message" id="buyer-password-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="buyer-password-confirm">비밀번호 재확인</label>
+          <div class="input-group">
+            <input
+              type="password"
+              id="buyer-password-confirm"
+              placeholder="비밀번호 재확인"
+            />
+            <span class="password-toggle">
+              <img src="./img/icon-check-off.svg" alt="" srcset=""
+            /></span>
+          </div>
+          <div class="error-message" id="buyer-password-confirm-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="buyer-name">이름</label>
+          <input type="text" id="buyer-name" placeholder="이름" />
+          <div class="error-message" id="buyer-name-error">필수 정보입니다</div>
+        </div>
+
+        <div class="form-group">
+          <label>휴대폰번호</label>
+          <div class="phone-container">
+            <select id="buyer-phone-prefix">
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="016">016</option>
+              <option value="017">017</option>
+            </select>
+            <input
+              type="text"
+              id="buyer-phone-middle"
+              placeholder="1234"
+              maxlength="4"
+            />
+            <input
+              type="text"
+              id="buyer-phone-last"
+              placeholder="5678"
+              maxlength="4"
+            />
+          </div>
+          <div class="error-message" id="buyer-phone-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="buyer-terms" />
+          <label for="buyer-terms"
+            >호두샵의 이용약관 및 개인정보처리방침에 대한 내용을 확인하였고
+            동의합니다.</label
+          >
+        </div>
+
+        <button class="register-btn" id="buyer-register-btn">가입하기</button>
+      </div>
+
+      <!-- 판매회원가입 폼 -->
+      <div class="form-container" id="seller-form" style="display: none">
+        <div class="form-group">
+          <label for="seller-id">아이디</label>
+          <div class="input-group">
+            <input type="text" id="seller-id" placeholder="아이디" />
+            <button class="verification-btn">중복확인</button>
+          </div>
+          <div class="error-message" id="seller-id-error">필수 정보입니다</div>
+        </div>
+
+        <div class="form-group">
+          <label for="seller-password">비밀번호</label>
+          <div class="input-group">
+            <input
+              type="password"
+              id="seller-password"
+              placeholder="비밀번호"
+            />
+            <span class="password-toggle"
+              ><img src="./img/icon-check-off.svg" alt="" srcset=""
+            /></span>
+          </div>
+          <div class="error-message" id="seller-password-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seller-password-confirm">비밀번호 재확인</label>
+          <div class="input-group">
+            <input
+              type="password"
+              id="seller-password-confirm"
+              placeholder="비밀번호 재확인"
+            />
+            <span class="password-toggle"
+              ><img src="./img/icon-check-off.svg" alt="" srcset=""
+            /></span>
+          </div>
+          <div class="error-message" id="seller-password-confirm-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seller-name">이름</label>
+          <input type="text" id="seller-name" placeholder="이름" />
+          <div class="error-message" id="seller-name-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>휴대폰번호</label>
+          <div class="phone-container">
+            <select id="seller-phone-prefix">
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="016">016</option>
+              <option value="017">017</option>
+            </select>
+            <input
+              type="text"
+              id="seller-phone-middle"
+              placeholder="1234"
+              maxlength="4"
+            />
+            <input
+              type="text"
+              id="seller-phone-last"
+              placeholder="5678"
+              maxlength="4"
+            />
+          </div>
+          <div class="error-message" id="seller-phone-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seller-store-name">스토어 이름</label>
+          <input type="text" id="seller-store-name" placeholder="스토어 이름" />
+          <div class="error-message" id="seller-store-name-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="seller-business-number">사업자 등록번호</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="seller-business-number"
+              placeholder="사업자 등록번호"
+            />
+            <button class="verification-btn">인증</button>
+          </div>
+          <div class="error-message" id="seller-business-number-error">
+            필수 정보입니다
+          </div>
+        </div>
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="seller-terms" />
+          <label for="seller-terms"
+            >호두샵의 이용약관 및 개인정보처리방침에 대한 내용을 확인하였고
+            동의합니다.</label
+          >
+        </div>
+
+        <button class="register-btn" id="seller-register-btn">가입하기</button>
+      </div>
+    </div>
+
+    <script></script>
+    <script src="./js/singup.js"></script>
+  </body>
+</html>

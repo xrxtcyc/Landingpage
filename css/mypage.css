@@ -1,0 +1,164 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "Arial", sans-serif;
+ }
+
+ body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+     background-color: white;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .logo {
+     text-align: center;
+     margin-bottom: 20px;
+ }
+
+ .logo h1 {
+     color: #6abe71;
+     font-size: 48px;
+     font-weight: bold;
+ }
+
+ .login-container {
+     width: 360px;
+     padding: 20px;
+     border-radius: 5px;
+ }
+
+ .tab-container {
+     display: flex;
+     margin-bottom: 20px;
+ }
+
+ .tab {
+     flex: 1;
+     padding: 10px;
+     text-align: center;
+     background-color: #f1f1f1;
+     cursor: pointer;
+     border: 1px solid #ddd;
+     transition: background-color 0.3s ease;
+ }
+
+ .tab.active {
+     background-color: white;
+     border-bottom: none;
+     font-weight: bold;
+     color: #6abe71;
+ }
+
+ .tab:first-child {
+     border-radius: 5px 0 0 5px;
+ }
+
+ .tab:last-child {
+     border-radius: 0 5px 5px 0;
+ }
+
+ .form-container {
+     padding: 20px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+ }
+
+ .input-group {
+     margin-bottom: 15px;
+     position: relative;
+ }
+
+ .input-group input {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 3px;
+ }
+
+ .error-message {
+     color: #e74c3c;
+     font-size: 12px;
+     margin-top: 5px;
+     display: none;
+ }
+
+ .input-group.error input {
+     border-color: #e74c3c;
+ }
+
+ .login-btn {
+     width: 100%;
+     padding: 12px;
+     background-color: #6abe71;
+     color: white;
+     border: none;
+     border-radius: 3px;
+     cursor: pointer;
+     font-size: 16px;
+     transition: background-color 0.3s ease;
+ }
+
+ .login-btn:hover {
+     background-color: #5aa061;
+ }
+
+ .links {
+     display: flex;
+     justify-content: center;
+     margin-top: 15px;
+     font-size: 14px;
+     color: #666;
+ }
+
+ .links a {
+     color: #666;
+     text-decoration: none;
+     margin: 0 10px;
+ }
+
+ .links a:hover {
+     text-decoration: underline;
+ }
+
+ /* 로그인 유형 표시 */
+ .login-type {
+     text-align: center;
+     margin-bottom: 15px;
+     font-size: 14px;
+     color: #6abe71;
+     font-weight: bold;
+ }
+
+ /* 로딩 애니메이션 */
+ .loading {
+     display: none;
+     text-align: center;
+     margin-top: 10px;
+ }
+
+ .loading::after {
+     content: "...";
+     animation: dots 1.5s steps(5, end) infinite;
+ }
+
+ @keyframes dots {
+
+     0%,
+     20% {
+         content: ".";
+     }
+
+     40% {
+         content: "..";
+     }
+
+     60%,
+     100% {
+         content: "...";
+     }
+ }

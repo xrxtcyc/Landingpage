@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HODU - 모던한 캐릭터 무늬 담요</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/product-detail.css" />
+  </head>
+  <body>
+    <header>
+      <div class="search-container">
+        <img src="img/logo.png" alt="HODU Logo" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="상품을 검색하세요"
+        />
+      </div>
+      <div class="icon-buttons">
+        <!-- Modified icon buttons with links and labels -->
+        <a href="cart.html" class="icon-button-container">
+          <div class="icon-button">
+            <img src="./img/icon-shopping-cart.svg" alt="장바구니" />
+          </div>
+          <span class="icon-label">장바구니</span>
+        </a>
+        <a href="mypage.html" class="icon-button-container">
+          <div class="icon-button">
+            <img src="./img/icon-user.svg" alt="사용자" />
+          </div>
+          <span class="icon-label">마이페이지</span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="product-image">
+        <div class="rabbit-character">
+          <img src="./img/img (1).png" alt="" />
+        </div>
+      </div>
+
+      <div class="product-details">
+        <div class="product-title">모던한 캐릭터 무늬 담요</div>
+        <div class="product-price">17,500원</div>
+
+        <div class="product-info">
+          <p>브랜드 : HODU | 제조사 : HODU</p>
+        </div>
+
+        <div class="quantity-selector">
+          <div class="quantity-button">-</div>
+          <div class="quantity-value">1</div>
+          <div class="quantity-button">+</div>
+        </div>
+
+        <div class="total-section">
+          <div class="total-label">총 상품 금액</div>
+          <div class="total-price">17,500원</div>
+        </div>
+
+        <div class="button-group">
+          <button class="buy-button">바로 구매하기</button>
+          <button class="cart-button">장바구니</button>
+        </div>
+      </div>
+    </main>
+
+    <div class="tabs">
+      <div class="tab active" data-tab="details">상세</div>
+      <div class="tab" data-tab="reviews">리뷰</div>
+      <div class="tab" data-tab="qa">Q&A</div>
+      <div class="tab" data-tab="shipping">배송/환불 안내</div>
+    </div>
+
+    <div class="tab-content active" id="details">
+      <h3>상품 상세 정보</h3>
+      <p>
+        모던한 캐릭터 무늬가 있는 고급 담요입니다. 부드러운 소재로 제작되어
+        편안하게 사용하실 수 있습니다.
+      </p>
+      <p>- 소재: 극세사 100%</p>
+      <p>- 사이즈: 150 x 200cm</p>
+      <p>- 제조국: 대한민국</p>
+    </div>
+
+    <div class="tab-content" id="reviews">
+      <h3>상품 리뷰</h3>
+      <div style="padding: 10px; border-bottom: 1px solid #eee">
+        <div style="display: flex; justify-content: space-between">
+          <div>⭐⭐⭐⭐⭐ | 김민수</div>
+          <div>2025.04.15</div>
+        </div>
+        <p>정말 따뜻하고 디자인도 너무 귀여워요! 빠른 배송 감사합니다.</p>
+      </div>
+      <div style="padding: 10px; border-bottom: 1px solid #eee">
+        <div style="display: flex; justify-content: space-between">
+          <div>⭐⭐⭐⭐ | 이지현</div>
+          <div>2025.04.12</div>
+        </div>
+        <p>재질이 좋고 포근해요. 캐릭터 무늬가 생각보다 더 귀여워요!</p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="qa">
+      <h3>상품 Q&A</h3>
+      <div style="padding: 10px; border-bottom: 1px solid #eee">
+        <div style="display: flex; justify-content: space-between">
+          <div>세탁 방법 | 박소연</div>
+          <div>2025.04.10</div>
+        </div>
+        <p>질문: 이 담요는 어떻게 세탁해야 하나요?</p>
+        <p style="background-color: #f9f9f9; padding: 10px; margin-top: 10px">
+          답변: 찬물에 중성세제를 사용하여 손세탁 또는 세탁기 사용 시 울코스로
+          세탁해주세요. 건조기 사용은 피해주세요.
+        </p>
+      </div>
+    </div>
+
+    <div class="tab-content" id="shipping">
+      <h4>환불 정책</h4>
+      <p>- 상품 수령 후 7일 이내 교환/환불 가능</p>
+      <p>- 고객 변심으로 인한 반품 시 왕복 배송비 고객 부담</p>
+      <p>- 상품 하자로 인한 반품 시 배송비 판매자 부담</p>
+    </div>
+    <script src="./js/product-detail.js"></script>
+  </body>
+</html>

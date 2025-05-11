@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HODU</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="search-container">
+        <img src="img/logo.png" alt="HODU Logo" />
+        <input
+          type="text"
+          class="search-input"
+          placeholder="상품을 검색하세요"
+        />
+      </div>
+      <div class="icon-buttons">
+        <!-- Modified icon buttons with links and labels -->
+        <a href="cart.html" class="icon-button-container">
+          <div class="icon-button">
+            <img src="./img/icon-shopping-cart.svg" alt="장바구니" />
+          </div>
+          <span class="icon-label">장바구니</span>
+        </a>
+        <a href="mypage.html" class="icon-button-container">
+          <div class="icon-button">
+            <img src="./img/icon-user.svg" alt="사용자" />
+          </div>
+          <span class="icon-label">마이페이지</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="banner">
+      <div class="banner-container">
+        <div class="banner-slide" style="background-color: #ffcccc"></div>
+        <div class="banner-slide" style="background-color: #ccffcc"></div>
+        <div class="banner-slide" style="background-color: #ccccff"></div>
+      </div>
+      <div class="nav-arrows">
+        <div class="nav-arrow" id="prev-btn">❮</div>
+        <div class="nav-arrow" id="next-btn">❯</div>
+      </div>
+    </div>
+
+    <div class="pagination-dots">
+      <span class="dot" data-index="0"></span>
+      <span class="dot active" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+    <!-- Updated product grid -->
+    <div class="products-grid">
+      <a href="product-detail.html?id=1" class="product-card">
+        <img src="./img/img (1).png" alt="마카롱 키링" class="product-image" />
+        <div class="product-info">
+          <div class="product-category">HOOU</div>
+          <div class="product-name">HOOU 마카롱 미니 키링과 케이스 참 세트</div>
+          <div class="product-price">25,000원</div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=2" class="product-card">
+        <img src="./img/img (1).png" alt="오렌지 키링" class="product-image" />
+        <div class="product-info">
+          <div class="product-category">HOOU</div>
+          <div class="product-name">더 오렌지 시리즈 귀여운 키링 참</div>
+          <div class="product-price">20,000원</div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=3" class="product-card">
+        <img src="./img/img (1).png" alt="토끼 인형" class="product-image" />
+        <div class="product-info">
+          <div class="product-category">HOOU</div>
+          <div class="product-name">HOOU 토끼 인형 패턴 세트</div>
+          <div class="product-price">25,000원</div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=4" class="product-card">
+        <img src="./img/img (1).png" alt="파울 키링" class="product-image" />
+        <div class="product-info">
+          <div class="product-category">HOOU</div>
+          <div class="product-name">파울리 캐릭터 디자인 스티커 세트</div>
+          <div class="product-price">26,000원</div>
+        </div>
+      </a>
+
+      <a href="product-detail.html?id=5" class="product-card">
+        <img src="./img/img (1).png" alt="캐릭터 키링" class="product-image" />
+        <div class="product-info">
+          <div class="product-category">HOOU</div>
+          <div class="product-name">
+            미니 캐릭터 시리즈 디자인 맞춤형 키링 세트
+          </div>
+          <div class="product-price">20,000원</div>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-top">
+          <div class="footer-nav">
+            <a href="#">이용약관</a>
+            <a href="#">개인정보</a>
+            <a href="#">공지사항/이벤트</a>
+            <a href="#">고객센터/FAQ</a>
+            <a href="#">주문조회</a>
+            <a href="#">매장안내</a>
+          </div>
+
+          <div class="icon-group">
+            <a
+              href="https://www.instagram.com"
+              class="social-icon"
+              target="_blank"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.facebook.com"
+              class="social-icon"
+              target="_blank"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.youtube.com"
+              class="social-icon"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="company-info">
+          <p>HOOU SHOP</p>
+          <p>
+            상호명: 후우샵 / 대표: 김후우 / 개인정보관리책임자: 이후우 / 전화:
+            02-1234-5678
+          </p>
+          <p>주소: 서울특별시 강남구 테헤란로 123 후우빌딩 4층</p>
+          <p>
+            사업자등록번호: 123-45-67890 / 통신판매업신고:
+            제2023-서울강남-1234호
+          </p>
+          <p>호스팅서비스: (주)후우 / Email: help@hoou.com</p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
