@@ -2,6 +2,9 @@
 JavaScript 코드 해석: 회원가입 페이지
 이 코드는 구매 회원과 판매 회원으로 나누어진 회원가입 페이지를 위한 JavaScript 코드입니다. 두 가지 유형의 사용자(구매자와 판매자)를 위한 폼을 관리하고, 입력 검증 및 서버 제출을 처리합니다.
 주요 기능
+![image](https://github.com/user-attachments/assets/919fd1a2-7729-46c6-8bb4-b9f9ddcea5e3)
+![image](https://github.com/user-attachments/assets/d82f44d9-dbc3-442b-b6e4-db1a0ac91245)
+![image](https://github.com/user-attachments/assets/d4015e4d-5e0e-4911-9576-5ef9090800c3)
 
 탭 전환 기능
 
