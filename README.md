@@ -1,4 +1,5 @@
 # Landingpage
+ https://xrxtcyc.github.io/Landingpage/
 JavaScript 코드 해석: 회원가입 페이지
 이 코드는 구매 회원과 판매 회원으로 나누어진 회원가입 페이지를 위한 JavaScript 코드입니다. 두 가지 유형의 사용자(구매자와 판매자)를 위한 폼을 관리하고, 입력 검증 및 서버 제출을 처리합니다.
 주요 기능
