@@ -11,7 +11,7 @@ JavaScript 코드 해석: 회원가입 페이지
 ![화면 캡처 2025-05-12 로그인 확인](https://github.com/user-attachments/assets/79adb190-2bdb-4c1b-a90a-12ad40d53e82)
 ![image](https://github.com/user-attachments/assets/aa296c9f-70be-43ae-a3bc-8b98f5a57e96)
 
-
+api 초기구현  및 아이디 저장 및 로그인
 username":"motherfucker","name":"ㅇㅇ","phone_number":"01078901234", 비번 qwer1234!"user_type":"BUYER"}
 탭 전환 기능
 
