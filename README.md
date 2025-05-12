@@ -7,6 +7,11 @@ JavaScript 코드 해석: 회원가입 페이지
 ![image](https://github.com/user-attachments/assets/d82f44d9-dbc3-442b-b6e4-db1a0ac91245)
 ![image](https://github.com/user-attachments/assets/d4015e4d-5e0e-4911-9576-5ef9090800c3)
 
+![화면 캡처 2025-05-12 물품](https://github.com/user-attachments/assets/176a9717-cee5-427a-9053-061ff0a0a53c)
+![화면 캡처 2025-05-12 로그인 확인](https://github.com/user-attachments/assets/79adb190-2bdb-4c1b-a90a-12ad40d53e82)
+![image](https://github.com/user-attachments/assets/aa296c9f-70be-43ae-a3bc-8b98f5a57e96)
+
+
 탭 전환 기능
 
 구매자와 판매자 탭 간 전환 가능
