@@ -12,6 +12,7 @@ JavaScript 코드 해석: 회원가입 페이지
 ![image](https://github.com/user-attachments/assets/aa296c9f-70be-43ae-a3bc-8b98f5a57e96)
 
 
+username":"motherfucker","name":"ㅇㅇ","phone_number":"01078901234", 비번 qwer1234!"user_type":"BUYER"}
 탭 전환 기능
 
 구매자와 판매자 탭 간 전환 가능
