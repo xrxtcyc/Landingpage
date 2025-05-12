@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buyer Signup</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input,
+      button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #response {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Buyer Signup Form</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter username" />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" />
+
+    <label for="name">Name</label>
+    <input type="text" id="name" placeholder="Enter your name" />
+
+    <label for="phone_number">Phone Number</label>
+    <input
+      type="text"
+      id="phone_number"
+      placeholder="Enter phone number (01012345678)"
+    />
+
+    <button onclick="signupBuyer()">Sign Up</button>
+
+    <div id="response"></div>
+
+    <script>
+      const signupBuyer = async () => {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const name = document.getElementById("name").value;
+        const phone_number = document.getElementById("phone_number").value;
+
+        const url =
+          "https://api.wenivops.co.kr/services/open-market/accounts/buyer/signup/";
+
+        const body = {
+          username: username,
+          password: password,
+          name: name,
+          phone_number: phone_number,
+        };
+
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+          });
+
+          const responseData = await response.json();
+
+          const responseDiv = document.getElementById("response");
+
+          if (!response.ok) {
+            responseDiv.innerHTML = `<strong>Error:</strong> ${JSON.stringify(
+              responseData
+            )}`;
+            responseDiv.style.backgroundColor = "#f8d7da";
+            responseDiv.style.borderColor = "#f5c6cb";
+          } else {
+            responseDiv.innerHTML = `<strong>Signup successful:</strong> ${JSON.stringify(
+              responseData
+            )}`;
+            responseDiv.style.backgroundColor = "#d4edda";
+            responseDiv.style.borderColor = "#c3e6cb";
+          }
+        } catch (error) {
+          document.getElementById(
+            "response"
+          ).innerHTML = `<strong>Error during the request:</strong> ${error.message}`;
+        }
+      };
+    </script>
+  </body>
+</html>

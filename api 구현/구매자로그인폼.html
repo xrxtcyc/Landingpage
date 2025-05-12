@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      input,
+      button {
+        margin: 10px 0;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      #response {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Login Form</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" placeholder="Enter username" />
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter password" />
+
+    <button onclick="login()">Login</button>
+
+    <div id="response"></div>
+
+    <script>
+      const login = async () => {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const url =
+          "https://api.wenivops.co.kr/services/open-market/accounts/login/";
+
+        const body = {
+          username: username,
+          password: password,
+        };
+
+        try {
+          const response = await fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+          });
+
+          const responseData = await response.json();
+
+          const responseDiv = document.getElementById("response");
+
+          if (!response.ok) {
+            responseDiv.innerHTML = `<strong>Error:</strong> ${responseData.error}`;
+            responseDiv.style.backgroundColor = "#f8d7da";
+            responseDiv.style.borderColor = "#f5c6cb";
+          } else {
+            // 성공적으로 로그인한 경우
+            responseDiv.innerHTML = `<strong>Login successful:</strong><br>Username: ${responseData.user.username}<br>Name: ${responseData.user.name}<br>User Type: ${responseData.user.user_type}<br><strong>Access Token:</strong> ${responseData.access}`;
+            responseDiv.style.backgroundColor = "#d4edda";
+            responseDiv.style.borderColor = "#c3e6cb";
+
+            // 토큰 저장 (예: 로컬 스토리지에 저장)
+            localStorage.setItem("access_token", responseData.access);
+            localStorage.setItem("refresh_token", responseData.refresh);
+          }
+        } catch (error) {
+          document.getElementById(
+            "response"
+          ).innerHTML = `<strong>Error during the request:</strong> ${error.message}`;
+        }
+      };
+    </script>
+  </body>
+</html>
